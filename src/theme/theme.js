@@ -1,13 +1,12 @@
 export const theme = {
   colors: {
-    text: '#fff',
+    text: '##0F0E0E',
     background: '#F0F8FF',
     backgroundSections: '#FFFFFF',
     primary: '#ff0000',
     border: '#c2c2c2',
     accent: '#0000ff',
-    online: "#7FFF00",
-    offline: "#DC143C",
+   
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import FeedbackOptions from 'components/FeedbackOptions';
-import Section from 'components/Section';
-import Notification from 'components/Notification';
+import FeedbackOptions from './components/FeedbackOptions';
+import Section from './components/Section';
 import Statistics from 'components/Statistics/Statistics ';
+import Notification from './components/Notification';
+import { Body } from 'components/common/body';
 
 export class App extends Component {
   static defaultProps = {
@@ -46,7 +47,7 @@ export class App extends Component {
   render() {
     const totalFeedback = this.countTotalFeedback();
     return (
-      <div className="FeedbeackForm">
+      <Body>
         <Section title="Please leave feedback">
           <FeedbackOptions
             onGood={this.handleGood}
@@ -68,7 +69,7 @@ export class App extends Component {
             <Notification message="No feedback given" />
           )}
         </Section>
-      </div>
+      </Body>
     );
   }
 }
