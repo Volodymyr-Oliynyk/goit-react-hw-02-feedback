@@ -12,7 +12,7 @@ const Section = ({ title, children }) => {
 
 export default Section;
 
-// Section.propTypes = {
-//   title: React.PropTypes.string.isRequired,
-//   children: React.PropTypes.node.isRequired,
-// };
+Section.propTypes = {
+  title: React.PropTypes.string.isRequired,
+  children: React.PropTypes.node.isRequired,
+};

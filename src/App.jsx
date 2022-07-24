@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import FeedbackOptions from './components/FeedbackOptions';
-import Section from './components/Section';
-import Statistics from 'components/Statistics/Statistics ';
 import Notification from './components/Notification';
 import { Body } from 'components/common/body';
+import Section from 'components/Section';
+import Statistics from 'components/Statistics';
+
 
 export class App extends Component {
   static defaultProps = {
@@ -46,9 +47,10 @@ export class App extends Component {
 
   render() {
     const totalFeedback = this.countTotalFeedback();
+    const { good, neutral, bad } = this.state;
     return (
       <Body>
-        <Section title="Please leave feedback">
+                <Section title="Please leave feedback">
           <FeedbackOptions
             onGood={this.handleGood}
             onNeutral={this.handleNeutral}
@@ -59,10 +61,10 @@ export class App extends Component {
         <Section title={'Statistics'}>
           {totalFeedback > 0 ? (
             <Statistics
-              good={this.state.good}
-              neutral={this.state.neutral}
-              bad={this.state.bad}
-              total={this.countTotalFeedback()}
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={totalFeedback}
               positivePercentage={this.countPositiveFeedbackPercentage()}
             />
           ) : (
