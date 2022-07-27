@@ -5,7 +5,6 @@ import { Body } from 'components/common/body';
 import Section from 'components/Section';
 import Statistics from 'components/Statistics';
 
-
 export class App extends Component {
   static defaultProps = {
     initialValueGood: 0,
@@ -50,7 +49,7 @@ export class App extends Component {
     const { good, neutral, bad } = this.state;
     return (
       <Body>
-                <Section title="Please leave feedback">
+        <Section title="Please leave feedback">
           <FeedbackOptions
             onGood={this.handleGood}
             onNeutral={this.handleNeutral}
@@ -77,3 +76,4 @@ export class App extends Component {
 }
 
 export default App;
+
